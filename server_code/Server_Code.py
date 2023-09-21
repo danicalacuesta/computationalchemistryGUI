@@ -8,17 +8,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 @anvil.server.callable
-def make_plot():
-  # Create random 
-  x = np.linspace(0.0, 10.0, 5)
-  y = np.random.rand(5)
-  
-  # Plot it in the normal Matplotlib way
-  plt.figure(1, figsize=(10,5))
-  plt.plot(x, y, 'crimson')  
-  
-  # Return this plot as a PNG image in a Media object, MPL means matplotlib
-  return anvil.mpl_util.plot_image()
+def cost_plot():
+    x_values = costpt()  # Replace with your calculated costpt values
+
+    # Create the costpt graph plot
+    plt.figure(figsize=(10, 5))
+    plt.plot(x_values, 3, 'blue')  # Use range(len(x_values)) as a placeholder for Y-axis
+
+    # Customize the plot (add labels, titles, etc. as needed)
+    plt.xlabel('Costpt Values')
+    plt.ylabel('Y-axis Label')
+    plt.title('Costpt vs. Y')
+
+    # Return the costpt graph as a PNG image in a Media object
+    return anvil.mpl_util.plot_image()
   
 @anvil.server.callable
 def make_plot1():

@@ -7,6 +7,8 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil.tables import app_tables
 
+
+
 class Test_Run(Test_RunTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -68,6 +70,7 @@ class Test_Run(Test_RunTemplate):
       """This method is called when this radio button is selected"""
       self.selected_button = self.Pt_button
       self.costpt()
+      
     def TI_button_clicked(self, **event_args):
         """This method is called when this radio button is selected"""
         # Access the stored variables directly from the 'data' attribute of the 'TI' button
@@ -94,17 +97,20 @@ class Test_Run(Test_RunTemplate):
         self.MW_p = V_data['MW_p']
         self.selected_button = self.V_button
         self.costpt()
-
+    #Graphing functions
+    
+        
     def TRc_button_click(self, **event_args):
         """This method is called when the button is clicked"""
-        media_obj = anvil.server.call('make_plot')
-        media_obj1 = anvil.server.call('make_plot1')
-        media_obj2 = anvil.server.call('make_plot2')
-        media_obj3 = anvil.server.call('make_plot3')
-        self.image_1.source = media_obj
-        self.image_2.source = media_obj1
-        self.image_3.source = media_obj2
-        self.image_4.source = media_obj3
+        
+        #cost_obj = anvil.server.call('cost_plot')
+        #media_obj1 = anvil.server.call('make_plot1')
+        #media_obj2 = anvil.server.call('make_plot2')
+        #media_obj3 = anvil.server.call('make_plot3')
+        #self.image_1.source = cost_obj
+        #self.image_2.source = media_obj1
+        #self.image_3.source = media_obj2
+        #self.image_4.source = media_obj3
         if self.selected_button is not None:
           self.costpt()
         else:
