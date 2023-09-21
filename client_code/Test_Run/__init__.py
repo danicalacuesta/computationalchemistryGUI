@@ -44,7 +44,7 @@ class Test_Run(Test_RunTemplate):
         """This method is called when this radio button is selected"""
         try:
             # Get the percentage value from the "SM_input" text box and convert it to a float
-            self.percent = float(self.SM_input.text)
+            self.percent = float(self.SM_input.text)/100
         except ValueError:
             # If the input cannot be converted to a float, set a default percentage value
             self.percent = 0.0001
@@ -102,12 +102,14 @@ class Test_Run(Test_RunTemplate):
         
     def TRc_button_click(self, **event_args):
         """This method is called when the button is clicked"""
-        
+        costpt_result = self.costpt()
+        media_obj = anvil.server.call('cost_plot', costpt_result)
+        self.image_2.source = media_obj
         #cost_obj = anvil.server.call('cost_plot')
         #media_obj1 = anvil.server.call('make_plot1')
         #media_obj2 = anvil.server.call('make_plot2')
         #media_obj3 = anvil.server.call('make_plot3')
-        #self.image_1.source = cost_obj
+        
         #self.image_2.source = media_obj1
         #self.image_3.source = media_obj2
         #self.image_4.source = media_obj3

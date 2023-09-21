@@ -8,19 +8,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 @anvil.server.callable
-def cost_plot():
-    x_values = costpt()  # Replace with your calculated costpt values
+def cost_plot(costpt_result):
+    x_data = [costpt_result]
+    y_data = [1.0]
 
-    # Create the costpt graph plot
-    plt.figure(figsize=(10, 5))
-    plt.plot(x_values, 3, 'blue')  # Use range(len(x_values)) as a placeholder for Y-axis
+    # Create a scatter plot
+    plt.figure(figsize=(18, 16))
+    plt.plot(x_data, y_data, color='blue', marker='o')
+    plt.xlabel('Costpt Result')
+    plt.ylabel('Y-Axis Label')  # You can change the label as needed
 
-    # Customize the plot (add labels, titles, etc. as needed)
-    plt.xlabel('Costpt Values')
-    plt.ylabel('Y-axis Label')
-    plt.title('Costpt vs. Y')
-
-    # Return the costpt graph as a PNG image in a Media object
+    # Return this plot as a PNG image in a Media object
     return anvil.mpl_util.plot_image()
   
 @anvil.server.callable
