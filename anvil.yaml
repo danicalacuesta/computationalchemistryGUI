@@ -1,0 +1,64 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Homepage}
+package_name: News_App
+allow_embedding: false
+name: Clone of OutputWorks
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-full
+  server_spec: null
+  server_spec_disabled: {requirements: '', base: python310-minimal}
+startup_form: null
+native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200&family=Raleway:wght@200;300;400&display=swap"
+    rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Inter&family=Poppins:wght@200&family=Raleway:wght@200;300;400&display=swap"
+    rel="stylesheet">'}
+db_schema:
+  input:
+    title: Input
+    client: search
+    server: full
+    columns:
+    - name: PM
+      admin_ui: {width: 200}
+      type: string
+    - name: SM
+      admin_ui: {width: 200}
+      type: string
+    - name: Secondary Metal Concentration
+      admin_ui: {width: 200}
+      type: string
+    - name: Temperature
+      admin_ui: {width: 200}
+      type: string
+    - name: Total Pressure
+      admin_ui: {width: 200}
+      type: string
+    - name: Hydrogen Composition
+      admin_ui: {width: 200}
+      type: string
+    - name: Oxygen Composition
+      admin_ui: {width: 200}
+      type: string
+  output:
+    client: none
+    server: full
+    columns: []
+    title: Output
+renamed: true

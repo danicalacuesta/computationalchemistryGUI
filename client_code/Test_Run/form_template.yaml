@@ -1,0 +1,724 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZZZVNB":20,"RMPUMS":20,"TWZKUC":20,"QBMKHJ":20,"UHJSSH":5,"ATVXVL":35,"FBJGQI":20,"SFSQNA":20,"FPHZWR":5,"WWNZMK":15,"EUITGN":20,"BZNWVE":5,"CULYCT":5,"ZZRZWX":5,"BTEJBJ":5,"AAZXXT":5,"NFRKKC":5,"IQPJVH":5,"XTYFYP":5,"QGURJR":20,"OJACRP":5,"HXFMBR":5,"IRBJCJ":5,"EVFIID":5,"LUEWIK":5,"GSIIVJ":5,"DSBJQH":5,"GIMSMX":5,"VXSQMH":20,"OJOGAT":5,"SCKXKN":5,"FFLOGG":5,"WSISJO":5,"YZAXHW":5,"JPDTJX":5,"IDYGGI":5,"AVZRJH":5,"OQYDBI":10,"NOLAKN":5,"OOBTQO":9,"FVQGWK":6,"UIQSWL":9,"DWHPXJ":6,"RGKETN":10,"NZERKQ":5}',
+    spacing_below: small, background: ''}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Elementary Reaction Steps
+
+      1) H₂(g) + 2* -> 2H+
+
+      2)O₂(g) + 2* -> 2O* Rate Limiting Step (RLS)
+
+      3)H* + O* -> OH* + *
+
+      4)H* + OH* -> H₂O(g) + 2*', font_size: 17, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+    underline: false, icon: ''}
+  name: ER_title
+  layout_properties:
+    col_widths: {}
+    grid_position: AFZBBX,MBANFN
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Steps, font_size: 20, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: true,
+    icon: ''}
+  name: label_1
+  layout_properties:
+    col_widths: {}
+    grid_position: KLLWGF,TPMUEX
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Select a Primary Metal, font_size: 18, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: PM_title
+  layout_properties:
+    col_widths: {}
+    grid_position: XSBPIC,QBMKHJ
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Pt, font_size: 17,
+    font: Raleway, spacing_above: none, spacing_below: none, italic: false, background: '',
+    bold: false, group_name: PM, underline: false}
+  name: Pt_button
+  layout_properties:
+    col_widths: {}
+    grid_position: XSBPIC,UHJSSH
+  data_bindings: []
+  event_bindings: {clicked: Pt_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ni, font_size: 17,
+    font: Raleway, spacing_above: none, spacing_below: none, italic: false, background: '',
+    bold: false, group_name: PM, underline: false}
+  name: Ni_button
+  layout_properties:
+    col_widths: {}
+    grid_position: XSBPIC,ATVXVL
+  data_bindings: []
+  event_bindings: {clicked: Ni_button_clicked}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Secondary Element, font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: SE_title
+  layout_properties:
+    col_widths: {}
+    grid_position: UPGERA,EUITGN
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ti, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: TI_button
+  layout_properties: {grid_position: 'UPGERA,BZNWVE'}
+  event_bindings: {clicked: TI_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: V, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: V_button
+  layout_properties: {grid_position: 'UPGERA,CULYCT'}
+  event_bindings: {clicked: V_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Cr, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: Cr_button
+  layout_properties: {grid_position: 'UPGERA,ZZRZWX'}
+  event_bindings: {clicked: Cr_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Mn, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: MN_button
+  layout_properties: {grid_position: 'UPGERA,BTEJBJ'}
+  event_bindings: {clicked: MN_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Fe, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: FE_button
+  layout_properties: {grid_position: 'UPGERA,AAZXXT'}
+  event_bindings: {clicked: FE_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Co, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: CO_button
+  layout_properties: {grid_position: 'UPGERA,NFRKKC'}
+  event_bindings: {clicked: CO_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ni, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: NI_button
+  layout_properties: {grid_position: 'UPGERA,IQPJVH'}
+  event_bindings: {clicked: NI_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Cu, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: CU_button
+  layout_properties: {grid_position: 'UPGERA,XTYFYP'}
+  event_bindings: {clicked: CU_button_clicked}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'NPBKNX,QGURJR'}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Zr, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: ZR_button
+  layout_properties: {grid_position: 'NPBKNX,OJACRP'}
+  event_bindings: {clicked: ZR_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Nb, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: NB_button
+  layout_properties: {grid_position: 'NPBKNX,HXFMBR'}
+  event_bindings: {clicked: NB_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Mo, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: MO_button
+  layout_properties: {grid_position: 'NPBKNX,IRBJCJ'}
+  event_bindings: {clicked: MO_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Tc, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: Tc_button
+  layout_properties: {grid_position: 'NPBKNX,EVFIID'}
+  event_bindings: {clicked: Tc_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ru, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: RU_button
+  layout_properties: {grid_position: 'NPBKNX,LUEWIK'}
+  event_bindings: {clicked: RU_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Rh, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: RH_button
+  layout_properties: {grid_position: 'NPBKNX,GSIIVJ'}
+  event_bindings: {clicked: RH_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Pd, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: PD_button
+  layout_properties: {grid_position: 'NPBKNX,DSBJQH'}
+  event_bindings: {clicked: PD_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ag, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: AG_button
+  layout_properties: {grid_position: 'NPBKNX,GIMSMX'}
+  event_bindings: {clicked: AG_button_clicked}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_3
+  layout_properties: {grid_position: 'XPNNQM,VXSQMH'}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Hf, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: HF_button
+  layout_properties: {grid_position: 'XPNNQM,OJOGAT'}
+  event_bindings: {clicked: HF_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ta, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: TA_button
+  layout_properties: {grid_position: 'XPNNQM,SCKXKN'}
+  event_bindings: {clicked: TA_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: W, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: W_button
+  layout_properties: {grid_position: 'XPNNQM,FFLOGG'}
+  event_bindings: {clicked: W_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Re, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: RE_button
+  layout_properties: {grid_position: 'XPNNQM,WSISJO'}
+  event_bindings: {clicked: RE_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Os, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: OS_button
+  layout_properties: {grid_position: 'XPNNQM,IDYGGI'}
+  event_bindings: {clicked: OS_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Ir, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: IR_button
+  layout_properties: {grid_position: 'XPNNQM,AVZRJH'}
+  event_bindings: {clicked: IR_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Pt, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: PT_button
+  layout_properties: {grid_position: 'XPNNQM,YZAXHW'}
+  event_bindings: {clicked: PT_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Au, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: AU_button
+  layout_properties: {grid_position: 'XPNNQM,JPDTJX'}
+  event_bindings: {clicked: AU_button_clicked}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Secondary Metal Concentration, font_size: 18, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: SM_title
+  layout_properties:
+    col_widths: {}
+    grid_position: QRPIIC,FBJGQI
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: Raleway, spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: SM_input
+  layout_properties:
+    col_widths: {}
+    grid_position: QRPIIC,SFSQNA
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: mol%, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: MP1_title
+  layout_properties:
+    col_widths: {}
+    grid_position: QRPIIC,FPHZWR
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'QRPIIC,WWNZMK'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Temperature, font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: TEMP_title
+  layout_properties:
+    col_widths: {}
+    grid_position: EVCPCR,ZZZVNB
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: Raleway, spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: TEMP_input
+  layout_properties:
+    col_widths: {}
+    grid_position: EVCPCR,RMPUMS
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: K, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: K_title
+  layout_properties:
+    col_widths: {}
+    grid_position: EVCPCR,TWZKUC
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Total Pressure, font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: TP_title
+  layout_properties:
+    col_widths: {}
+    grid_position: QVTMMY,TQHALQ
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: Raleway, spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: TP_input
+  layout_properties:
+    col_widths: {}
+    grid_position: QVTMMY,GMUZMT
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: bar, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: BAR_title
+  layout_properties:
+    col_widths: {}
+    grid_position: QVTMMY,NYYRZX
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Hydrogen Composition, font_size: 18, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: HCOMP_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RBKIVA,NYZLRX
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: Raleway, spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: HCOMP_input
+  layout_properties:
+    col_widths: {}
+    grid_position: RBKIVA,RNLPPP
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: mol%, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: MP2_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RBKIVA,ZAUOTR
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Oxygen Composition, font_size: 18, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: OCOMP_title
+  layout_properties:
+    col_widths: {}
+    grid_position: YQFNNT,QMPRHV
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: Raleway, spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: OCOMP_input
+  layout_properties:
+    col_widths: {}
+    grid_position: YQFNNT,QAMPHU
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: mol%, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: MP3_title
+  layout_properties:
+    col_widths: {}
+    grid_position: YQFNNT,LROAXG
+- type: Button
+  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'Test Run Catalyst
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: TRc_button
+  layout_properties: {grid_position: 'IQWPUQ,DAFKCR'}
+  event_bindings: {click: TRc_button_click}
+- type: Button
+  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'Cancel
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: C_button
+  layout_properties: {grid_position: 'IQWPUQ,BWVKCW'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Results, font_size: 20, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: true,
+    icon: ''}
+  name: RESULTS_title
+  layout_properties:
+    col_widths: {}
+    grid_position: SAUYRD,RUYWOR
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Catalyst Performance, font_size: 18, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: SM_title_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: CJBMIT,ISWPHM
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: CP_label
+  layout_properties:
+    col_widths: {}
+    grid_position: CJBMIT,ELQHBA
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: CC_label
+  layout_properties:
+    col_widths: {}
+    grid_position: CJBMIT,FDJMEA
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: $/g, font_size: 17, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: PG_title
+  layout_properties:
+    col_widths: {}
+    grid_position: CJBMIT,QLVUIS
+- type: Image
+  properties: {}
+  name: image_1
+  layout_properties: {grid_position: 'CVLISI,YVYSKD'}
+- type: Image
+  properties: {}
+  name: image_2
+  layout_properties: {grid_position: 'CVLISI,PJSNVV'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '∆H(1) [kJ/mol]', font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: H1_title
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,OQYDBI
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H1_label
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,NOLAKN
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '∆H(2) [kJ/mol]', font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: H2_title
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,OOBTQO
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H2_label
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,FVQGWK
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '∆H(3) [kJ/mol]
+
+      ', font_size: 18, font: Raleway, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: H3_title
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,UIQSWL
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H3_label
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,DWHPXJ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '∆H(4) [kJ/mol]
+
+      ', font_size: 18, font: Raleway, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: H3_title_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,RGKETN
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H4_label
+  layout_properties:
+    col_widths: {}
+    grid_position: HJHKAZ,NZERKQ
+- type: Image
+  properties: {}
+  name: image_3
+  layout_properties: {grid_position: 'VRAQBK,LDHXTB'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'T*∆S(1) [kJ/mol]', font_size: 15, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: T1_title
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,ZBUCCB
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 15, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H1_label_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,YAKBRS
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'T*∆S(2) [kJ/mol]', font_size: 15, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: H2_title_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,JRVYJZ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 15, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H2_label_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,DDHJGC
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'T*∆S(3) [kJ/mol]', font_size: 15, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: H3_title_copy_2
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,HENOAR
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 15, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H3_label_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,NLLOIE
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'T*∆S(4) [kJ/mol]', font_size: 15, font: Raleway, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: H3_title_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,XAFGLJ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 15, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: H4_label_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: WZUUJJ,ILBNXP
+- type: Image
+  properties: {}
+  name: image_4
+  layout_properties: {grid_position: 'MUAZLN,APNXNJ'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Kₑ(1), font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE1_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,IOFIGV
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE1_label
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,XWPUYY
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Kₑ(2), font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE2_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,KKKXUQ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE2_label
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,QELFKR
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Kₑ(3), font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE3_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,IZSOUT
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 18, font: Raleway, spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: KE3_label
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,GWFHJZ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Kₑ(4)
+
+      ', font_size: 18, font: Raleway, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: KE4_title
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,NRBHXV
+- type: Label
+  properties: {}
+  name: KE4_label
+  layout_properties:
+    col_widths: {}
+    grid_position: RMNBCR,RFSJJR
+- type: Button
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Reset Graphs, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Error',
+    bold: false, underline: false, icon: ''}
+  name: button_1
+  layout_properties:
+    col_widths: {}
+    grid_position: MFYFSR,PZMOJO
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#FFF', visible: true, text: Exit, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:On Primary
+      Container', bold: false, underline: false, icon: ''}
+  name: exit_button
+  layout_properties:
+    col_widths: {}
+    grid_position: MFYFSR,HPUZCM
+is_package: true
