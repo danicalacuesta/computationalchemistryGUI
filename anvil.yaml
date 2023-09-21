@@ -7,7 +7,7 @@ services:
 startup: {type: form, module: Homepage}
 package_name: News_App
 allow_embedding: false
-name: Clone of OutputWorks
+name: Graphs
 runtime_options:
   version: 2
   client_version: '3'
