@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 
 @anvil.server.callable
 def cost_plot(costpt_result):
-    x_data = [costpt_result]
-    y_data = [1.0]
+    x_data = [1.0]
+    y_data = [costpt_result]
 
     # Create a scatter plot
     plt.figure(figsize=(18, 16))
