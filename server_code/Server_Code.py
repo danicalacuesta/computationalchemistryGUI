@@ -7,19 +7,19 @@ import anvil.mpl_util
 import numpy as np
 import matplotlib.pyplot as plt
 
-def cost_plot():
-  x = np.linspace(0.0, 25.0, 5)
-  y = [1]
+@anvil.server.callable
+def cost_plot(cost):
+  x = [1]
+  y = [cost]
   
   # Plot it in the normal Matplotlib way
-  plt.figure(1, figsize=(10,5))
-  plt.plot(self.Cost, y, 'crimson')  
+  plt.scatter(x,y, color= "crimson", marker='o')
   
   # Return this plot as a PNG image in a Media object, MPL means matplotlib
   return anvil.mpl_util.plot_image()
-  @anvil.server.callable
-  
 @anvil.server.callable
+  
+
 def make_plot1():
   # Create random 
   x = np.linspace(0.0, 15.0, 5)
