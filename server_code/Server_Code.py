@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 @anvil.server.callable
 def cost_plot(cost):
-  x = [1]
+  x = [1,2,3,4,5,6,7,8,9,10]#have it at this domain
   y = [cost]
   
   # Plot it in the normal Matplotlib way
