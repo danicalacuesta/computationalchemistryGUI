@@ -15,6 +15,8 @@ class Test_Run(Test_RunTemplate):
         self.init_components(**properties)
         # Any code you write here will run when the form opens.
         # Store the variables in the 'TI' button's data attribute
+        self.TRc_button_click_count=0
+        self.runcost= []
         self.TI_button.data = {
             'EN_p': 1.54,
             'Nelec_p': 4,
@@ -65,8 +67,8 @@ class Test_Run(Test_RunTemplate):
         self.kg_m = self.mol_m * self.MW_mpt / 1000
         self.Cost = (self.kg_p * self.Cost_p + self.kg_m * 27800) / (self.kg_p + self.kg_m) / 1000
         self.CC_label.text = f"Cost of Catalyst: {self.Cost:.2f} $/kg"
-        media_obj = anvil.server.call('cost_plot', self.Cost)
-        self.image_2.source = media_obj
+        #media_obj = anvil.server.call('cost_plot', self.Cost)
+        #self.image_2.source = media_obj
 
     def Pt_button_clicked(self, **event_args):
       """This method is called when this radio button is selected"""
@@ -104,9 +106,7 @@ class Test_Run(Test_RunTemplate):
         
     def TRc_button_click(self, **event_args):
         """This method is called when the button is clicked"""
-        
-        
-        #cost_obj = anvil.server.call('cost_plot')
+        self.TRc_button_click_count += 1
         #media_obj1 = anvil.server.call('make_plot1')
         #media_obj2 = anvil.server.call('make_plot2')
         #media_obj3 = anvil.server.call('make_plot3')
@@ -115,7 +115,11 @@ class Test_Run(Test_RunTemplate):
         #self.image_3.source = media_obj2
         #self.image_4.source = media_obj3
         if self.selected_button is not None:
+          testrun= list(range(1, self.TRc_button_click_count + 1))
           self.costpt()
+          self.runcost.append(self.Cost)  # Append the cost to the list
+          media_obj = anvil.server.call('cost_plot', testrun, self.runcost)
+          self.image_2.source = media_obj
           
         else:
             # Display an error message or handle the case when no button is selected

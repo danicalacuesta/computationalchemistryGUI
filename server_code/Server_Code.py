@@ -8,11 +8,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 @anvil.server.callable
-def cost_plot(cost):
-  x = [1,2,3,4,5,6,7,8,9,10]#have it at this domain
-  y = [cost]
+def cost_plot(testrun,runcost):
+  x = [testrun]#have it at this domain
+  y = [runcost]
   
   # Plot it in the normal Matplotlib way
+  plt.figure(figsize=(10,6))
   plt.scatter(x,y, color= "crimson", marker='o')
   
   # Return this plot as a PNG image in a Media object, MPL means matplotlib
@@ -26,9 +27,11 @@ def make_plot1():
   y = np.random.rand(5)
   
   # Plot it in the normal Matplotlib way
-  plt.figure(1, figsize=(10,5))
+  plt.figure(1, figsize=(10,10))
   plt.plot(x, y, 'crimson')  
-  
+  plt.xticks(fontsize=25)  # Adjust the font size for x-axis tick labels
+  plt.yticks(fontsize=25)  # Adjust the font size for y-axis tick labels
+
   # Return this plot as a PNG image in a Media object, MPL means matplotlib
   return anvil.mpl_util.plot_image()
 
