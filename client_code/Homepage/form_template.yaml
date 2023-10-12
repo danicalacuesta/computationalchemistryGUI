@@ -31,7 +31,7 @@ components:
         visible: true, spacing_above: small, spacing_below: small, item_template: Test_Run,
         background: ''}
       name: repeating_panel_1
-      layout_properties: {}
+      layout_properties: {expand: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links

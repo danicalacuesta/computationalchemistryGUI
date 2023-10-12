@@ -27,11 +27,10 @@ def make_plot1():
   y = np.random.rand(5)
   
   # Plot it in the normal Matplotlib way
+ 
   plt.figure(1, figsize=(10,10))
   plt.plot(x, y, 'crimson')  
-  plt.xticks(fontsize=25)  # Adjust the font size for x-axis tick labels
-  plt.yticks(fontsize=25)  # Adjust the font size for y-axis tick labels
-
+  
   # Return this plot as a PNG image in a Media object, MPL means matplotlib
   return anvil.mpl_util.plot_image()
 
