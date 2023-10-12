@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 @anvil.server.callable
 def cost_plot(testrun,runcost):
-  x = [testrun]#have it at this domain
+  x = [testrun]
   y = [runcost]
   
   # Plot it in the normal Matplotlib way
