@@ -14,9 +14,11 @@ class Test_Run(Test_RunTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         # Any code you write here will run when the form opens.
-        # Store the variables in the 'TI' button's data attribute
+      
+        #initialize for costpt graph
         self.TRc_button_click_count=0
         self.runcost= []
+        #secondary element data
         self.TI_button.data = {
             'EN_p': 1.54,
             'Nelec_p': 4,
