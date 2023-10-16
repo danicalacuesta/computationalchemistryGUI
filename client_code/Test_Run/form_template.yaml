@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZZZVNB":20,"RMPUMS":20,"TWZKUC":20,"QBMKHJ":20,"UHJSSH":5,"ATVXVL":35,"FBJGQI":20,"SFSQNA":20,"FPHZWR":5,"WWNZMK":15,"EUITGN":20,"BZNWVE":5,"CULYCT":5,"ZZRZWX":5,"BTEJBJ":5,"AAZXXT":5,"NFRKKC":5,"IQPJVH":5,"XTYFYP":5,"QGURJR":20,"OJACRP":5,"HXFMBR":5,"IRBJCJ":5,"EVFIID":5,"LUEWIK":5,"GSIIVJ":5,"DSBJQH":5,"GIMSMX":5,"VXSQMH":20,"OJOGAT":5,"SCKXKN":5,"FFLOGG":5,"WSISJO":5,"YZAXHW":5,"JPDTJX":5,"IDYGGI":5,"AVZRJH":5,"OQYDBI":10,"NOLAKN":5,"OOBTQO":9,"FVQGWK":6,"UIQSWL":9,"DWHPXJ":6,"RGKETN":10,"NZERKQ":5}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZZZVNB":20,"RMPUMS":20,"TWZKUC":20,"QBMKHJ":20,"UHJSSH":5,"ATVXVL":35,"FBJGQI":20,"SFSQNA":20,"FPHZWR":5,"WWNZMK":15,"EUITGN":20,"BZNWVE":5,"CULYCT":5,"ZZRZWX":5,"BTEJBJ":5,"AAZXXT":5,"NFRKKC":5,"IQPJVH":5,"XTYFYP":5,"QGURJR":20,"OJACRP":5,"HXFMBR":5,"IRBJCJ":5,"LUEWIK":5,"GSIIVJ":5,"DSBJQH":5,"GIMSMX":5,"VXSQMH":20,"OJOGAT":5,"SCKXKN":5,"FFLOGG":5,"WSISJO":5,"YZAXHW":5,"JPDTJX":5,"IDYGGI":5,"AVZRJH":5,"OQYDBI":10,"NOLAKN":5,"OOBTQO":9,"FVQGWK":6,"UIQSWL":9,"DWHPXJ":6,"RGKETN":10,"NZERKQ":5}',
     spacing_below: small, background: ''}
 components:
 - type: Label
@@ -99,7 +99,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Mn, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: MN_button
+  name: Mn_button
   layout_properties: {grid_position: 'UPGERA,BTEJBJ'}
   event_bindings: {clicked: MN_button_clicked}
 - type: RadioButton
@@ -107,7 +107,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Fe, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: FE_button
+  name: Fe_button
   layout_properties: {grid_position: 'UPGERA,AAZXXT'}
   event_bindings: {clicked: FE_button_clicked}
 - type: RadioButton
@@ -115,7 +115,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Co, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: CO_button
+  name: Co_button
   layout_properties: {grid_position: 'UPGERA,NFRKKC'}
   event_bindings: {clicked: CO_button_clicked}
 - type: RadioButton
@@ -131,9 +131,17 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Cu, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: CU_button
+  name: Cu_button
   layout_properties: {grid_position: 'UPGERA,XTYFYP'}
   event_bindings: {clicked: CU_button_clicked}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Tc, font_size: null,
+    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: radioGroup1, underline: false}
+  name: Tc_button
+  layout_properties: {grid_position: 'XUXHIJ,VIFXHU'}
+  event_bindings: {clicked: Tc_button_clicked}
 - type: Spacer
   properties: {height: 32}
   name: spacer_2
@@ -143,7 +151,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Zr, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: ZR_button
+  name: Zr_button
   layout_properties: {grid_position: 'NPBKNX,OJACRP'}
   event_bindings: {clicked: ZR_button_clicked}
 - type: RadioButton
@@ -151,7 +159,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Nb, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: NB_button
+  name: Nb_button
   layout_properties: {grid_position: 'NPBKNX,HXFMBR'}
   event_bindings: {clicked: NB_button_clicked}
 - type: RadioButton
@@ -159,23 +167,15 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Mo, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: MO_button
+  name: Mo_button
   layout_properties: {grid_position: 'NPBKNX,IRBJCJ'}
   event_bindings: {clicked: MO_button_clicked}
-- type: RadioButton
-  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-    enabled: true, foreground: '', value: '', visible: true, text: Tc, font_size: null,
-    font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
-    bold: false, group_name: radioGroup1, underline: false}
-  name: Tc_button
-  layout_properties: {grid_position: 'NPBKNX,EVFIID'}
-  event_bindings: {clicked: Tc_button_clicked}
 - type: RadioButton
   properties: {role: null, selected: false, align: left, tooltip: '', border: '',
     enabled: true, foreground: '', value: '', visible: true, text: Ru, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: RU_button
+  name: Ru_button
   layout_properties: {grid_position: 'NPBKNX,LUEWIK'}
   event_bindings: {clicked: RU_button_clicked}
 - type: RadioButton
@@ -183,7 +183,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Rh, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: RH_button
+  name: Rh_button
   layout_properties: {grid_position: 'NPBKNX,GSIIVJ'}
   event_bindings: {clicked: RH_button_clicked}
 - type: RadioButton
@@ -191,7 +191,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Pd, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: PD_button
+  name: Pd_button
   layout_properties: {grid_position: 'NPBKNX,DSBJQH'}
   event_bindings: {clicked: PD_button_clicked}
 - type: RadioButton
@@ -199,7 +199,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Ag, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: AG_button
+  name: Ag_button
   layout_properties: {grid_position: 'NPBKNX,GIMSMX'}
   event_bindings: {clicked: AG_button_clicked}
 - type: Spacer
@@ -211,7 +211,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Hf, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: HF_button
+  name: Hf_button
   layout_properties: {grid_position: 'XPNNQM,OJOGAT'}
   event_bindings: {clicked: HF_button_clicked}
 - type: RadioButton
@@ -219,7 +219,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Ta, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: TA_button
+  name: Ta_button
   layout_properties: {grid_position: 'XPNNQM,SCKXKN'}
   event_bindings: {clicked: TA_button_clicked}
 - type: RadioButton
@@ -235,7 +235,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Re, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: RE_button
+  name: Re_button
   layout_properties: {grid_position: 'XPNNQM,WSISJO'}
   event_bindings: {clicked: RE_button_clicked}
 - type: RadioButton
@@ -243,7 +243,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Os, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: OS_button
+  name: Os_button
   layout_properties: {grid_position: 'XPNNQM,IDYGGI'}
   event_bindings: {clicked: OS_button_clicked}
 - type: RadioButton
@@ -251,7 +251,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Ir, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: IR_button
+  name: Ir_button
   layout_properties: {grid_position: 'XPNNQM,AVZRJH'}
   event_bindings: {clicked: IR_button_clicked}
 - type: RadioButton
@@ -267,7 +267,7 @@ components:
     enabled: true, foreground: '', value: '', visible: true, text: Au, font_size: null,
     font: Raleway, spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
-  name: AU_button
+  name: Au_button
   layout_properties: {grid_position: 'XPNNQM,JPDTJX'}
   event_bindings: {clicked: AU_button_clicked}
 - type: Label

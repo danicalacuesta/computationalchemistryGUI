@@ -18,7 +18,9 @@ class Test_Run(Test_RunTemplate):
         self.runcost= []
         #secondary element data
         #searches for button: https://chat.openai.com/c/9eac150b-167f-4c29-99e2-6b7c9de6b753
-        self.TI_button.data = {
+       
+        self.button.data= {
+          'Ti_button': {
             'EN_p': 1.54,
             'Nelec_p': 4,
             'Ed_p': 0.7,
@@ -26,8 +28,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 3.95,
             'Cost_p': 11.1,
             'MW_p': 47.867
-        }
-        self.V_button.data = {
+          },
+          'V_button': {
             'EN_p': 1.63,
             'Nelec_p': 5,
             'Ed_p': 0.4,
@@ -35,8 +37,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.10,
             'Cost_p': 357,
             'MW_p': 50.9415
-        }
-        self.Cr_button.data = {
+          },
+          'Cr_button': {
             'EN_p': 1.66,
             'Nelec_p': 6,
             'Ed_p': -0.3,
@@ -44,8 +46,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.60,
             'Cost_p': 0.094,
             'MW_p': 51.9961
-        }
-        self.MN_button.data = {
+          },
+          'Mn_button': {
             'EN_p': 1.55,
             'Nelec_p': 7,
             'Ed_p': -0.9,
@@ -53,8 +55,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 3.8,
             'Cost_p': 0.0182,
             'MW_p': 54.938044
-        }
-        self.FE_button.data = {
+        },
+        "Fe_button":  {
             'EN_p': 1.83,
             'Nelec_p': 8,
             'Ed_p': -0.8,
@@ -62,8 +64,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.30,
             'Cost_p': 0.0000424,
             'MW_p': 55.845
-        }
-        self.CO_button.data = {
+        },
+        "Co_button": {
             'EN_p': 1.88,
             'Nelec_p': 9,
             'Ed_p': -1.5,
@@ -71,8 +73,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.40,
             'Cost_p': 0.0328,
             'MW_p': 58.933195
-        }
-        self.Ni_button.data = {
+        },
+        "NI_button": {
             'EN_p': 1.91,
             'Nelec_p': 10,
             'Ed_p': -1.6,
@@ -80,8 +82,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.50,
             'Cost_p': 0.0139,
             'MW_p': 58.6934
-        }
-        self.CU_button.data = {
+        },
+        "Cu_button": {
             'EN_p': 1.90,
             'Nelec_p': 11,
             'Ed_p': -2.5,
@@ -89,8 +91,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 4.40,
             'Cost_p': 0.006,
             'MW_p': 63.546
-        }
-        self.ZR_button.data = {
+        },
+        "Zr_button" : {
             'EN_p': 1.33,
             'Nelec_p': 4,
             'Ed_p': 0.7,
@@ -98,8 +100,8 @@ class Test_Run(Test_RunTemplate):
             'WF_p': 3.90,
             'Cost_p': 0.0357,
             'MW_p': 91.224
-        }
-        self.NB_button.data = {
+        },
+        "Nb_button" : {
             'EN_p' : 1.60,
 			      'Nelec_p' : 5,
       			'Ed_p' : 0.1,
@@ -107,8 +109,8 @@ class Test_Run(Test_RunTemplate):
       			'WF_p' : 4.00,
       			'Cost_p' : 0.0614,
       			'MW_p' : 92.90638,
-        }
-        self.MO_button.data = {
+        },
+        "Mo_button" : {
             "EN_p" : 2.16,
       			"Nelec_p" : 6,
       			"Ed_p" : -0.9,
@@ -116,8 +118,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.30,
       			"Cost_p" : 0.0401,
       			"MW_p" : 95.94,
-        }
-        self.Tc_button.data = {
+        },
+        "Tc_button" :{
             "EN_p" : 1.90,
       			"Nelec_p" : 7,
       			"Ed_p" : -1.6,
@@ -125,8 +127,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.4,
       			"Cost_p" : 100,
       			"MW_p" : 98
-        }
-        self.RU_button.data = {
+        },
+        "Ru_button":{
             "EN_p" : 2.20,
       			"Nelec_p" : 8,
       			"Ed_p" : -1.9,
@@ -134,8 +136,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.60,
       			"Cost_p" : 10.40,
       			"MW_p" : 101.07
-        }
-        self.RH_button.data = {
+        },
+        "Rh_button" :{
             "EN_p" : 2.28,
       			"Nelec_p" : 9,
       			"Ed_p" : -2.1,
@@ -143,8 +145,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.75,
       			"Cost_p" : 147,
       			"MW_p" : 102.9055
-        }
-        self.PD_button.data = {
+        },
+        "Pd_button" : {
             "EN_p" : 2.20,
       			"Nelec_p" : 10,
       			"Ed_p" : -1.8,
@@ -152,8 +154,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.80,
       			"Cost_p" : 49.5,
       			"MW_p" : 106.42
-        }
-        self.AG_button.data = {
+        },
+        "Ag_button" : {
             "EN_p" : 1.93,
       			"Nelec_p" : 11,
       			"Ed_p" : -4.0,
@@ -161,8 +163,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.30,
       			"Cost_p" : 0.521,
       			"MW_p" : 107.8682
-        }
-        self.HF_button.data = {
+        },
+        "Hf_button" : {
             "EN_p": 1.30,
       			"Nelec_p" : 4,
       			"Ed_p" : 0.7,
@@ -170,8 +172,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 3.50,
       			"Cost_p" : 0.9,
       			"MW_p" : 178.49
-        }
-        self.TA_button.data = {
+        },
+        "Ta_button": {
             "EN_p" : 1.50,
       			"Nelec_p" : 5,
       			"Ed_p" : 0.3,
@@ -179,8 +181,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.10,
       			"Cost_p" : 0.298,
       			"MW_p" : 171.9449
-        }
-        self.W_button.data = {
+        },
+        "W_button" : {
             "EN_p" : 2.36,
       			"Nelec_p" : 6,
       			"Ed_p" : -0.8,
@@ -188,8 +190,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 4.50,
       			"Cost_p" : 0.0353,
       			"MW_p" : 183.84
-        }
-        self.RE_button.data = {
+        },
+        "Re_button":  {
             "EN_p" : 1.90,
       			"Nelec_p" : 7,
       			"Ed_p" : -1.6,
@@ -197,8 +199,8 @@ class Test_Run(Test_RunTemplate):
       			"WF_p" : 5.00,
       			"Cost_p" : 3.010,
       			"MW_p" : 186.207
-        }
-        self.OS_button.data = {
+        },
+        "Os_button" : {
             "EN_p" : 2.20,
       			'Nelec_p' : 8,
       			'Ed_p' : -2.2,
@@ -206,8 +208,8 @@ class Test_Run(Test_RunTemplate):
       			'WF_p' : 4.70,
       			'Cost_p' : 12,
       			'MW_p' : 190.2
-        }
-        self.IR_button.data = {
+        },
+        "Ir_button":  {
             'EN_p' : 2.20,
       			'Nelec_p' : 9,
       			'Ed_p' : -2.9,
@@ -215,8 +217,8 @@ class Test_Run(Test_RunTemplate):
       			'WF_p' : 5.30,
       			'Cost_p' : 55.5,
       			'MW_p' : 192.22
-        }
-        self.PT_button.data = {
+        },
+        "PT_button" : {
             'EN_p' : 2.28,
       			'Nelec_p' : 10,
       			'Ed_p' : -2.4,
@@ -224,8 +226,8 @@ class Test_Run(Test_RunTemplate):
       			'WF_p ': 5.30,
       			'Cost_p' :27.8,
       			'MW_p' : 195.084
-        }
-        self.AU_button.data = {
+        },
+        "Au_button" : {
             "EN_p ": 2.54,
       			"Nelec_p" : 11,
       			"Ed_p" : -3.4,
@@ -234,13 +236,32 @@ class Test_Run(Test_RunTemplate):
       			"Cost_p" : 44.8,
       			"MW_p" : 196.96657
         }
-      
+        }  
+
         # Initialize button click flags to False
         self.selected_button= None
         self.MW_mpt = 195.084
         self.mol_p = 100
         self.percent = 0  # Initialize percent to 0
-        
+
+    def set_button_attributes(self, button):
+      button_data = button.data
+      self.EN_p = button_data['EN_p']
+      self.Nelec_p = button_data['Nelec_p']
+      self.Ed_p = button_data['Ed_p']
+      self.Oxo_p = button_data['Oxo_p']
+      self.WF_p = button_data['WF_p']
+      self.Cost_p = button_data['Cost_p']
+      self.MW_p = button_data['MW_p']
+      self.selected_button = button
+
+    def TI_button_clicked(self, **event_args):
+        """This method is called when this radio button is selected"""
+        # Access the stored variables directly from the 'data' attribute of the 'TI' button
+        self.set_button_attributes(self.TI_button)
+    def V_button_clicked(self, **event_args):
+        """This method is called when this radio button is selected"""
+        self.set_button_attributes(self.V_button)
     # TI and V are secondary metals you can choose from
     def costpt(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -252,12 +273,12 @@ class Test_Run(Test_RunTemplate):
             self.percent = 0.0001
         self.mol_m = (1 - self.percent) / self.percent * self.mol_p
 
-        if self.TI_button_clicked:
-            self.MW_p = self.TI_button.data['MW_p']
-            self.Cost_p = self.TI_button.data['Cost_p']
-        elif self.V_button_clicked:
-            self.MW_p = self.V_button.data['MW_p']
-            self.Cost_p = self.V_button.data['Cost_p']
+        if self.selected_button is not None:
+            button_name = self.selected_button.name
+            button_info = self.button_data.get(button_name)
+            if button_info:
+                self.MW_p = button_info['MW_p']
+                self.Cost_p = button_info['Cost_p']
         else:
             # Set a default value if neither TI_button nor V_button is clicked
             self.MW_p = 0
@@ -272,46 +293,11 @@ class Test_Run(Test_RunTemplate):
       """This method is called when this radio button is selected"""
       self.selected_button = self.Pt_button
       self.costpt()
-      
-    def TI_button_clicked(self, **event_args):
-        """This method is called when this radio button is selected"""
-        # Access the stored variables directly from the 'data' attribute of the 'TI' button
-        TI_data = self.TI_button.data
-        self.EN_p = TI_data['EN_p']
-        self.Nelec_p = TI_data['Nelec_p']
-        self.Ed_p = TI_data['Ed_p']
-        self.Oxo_p = TI_data['Oxo_p']
-        self.WF_p = TI_data['WF_p']
-        self.Cost_p = TI_data['Cost_p']
-        self.MW_p = TI_data['MW_p']
-        self.selected_button = self.TI_button
-        self.costpt()
-
-    def V_button_clicked(self, **event_args):
-        """This method is called when this radio button is selected"""
-        V_data = self.V_button.data
-        self.EN_p = V_data['EN_p']
-        self.Nelec_p = V_data['Nelec_p']
-        self.Ed_p = V_data['Ed_p']
-        self.Oxo_p = V_data['Oxo_p']
-        self.WF_p = V_data['WF_p']
-        self.Cost_p = V_data['Cost_p']
-        self.MW_p = V_data['MW_p']
-        self.selected_button = self.V_button
-        self.costpt()
-    #Graphing functions
-    
         
     def TRc_button_click(self, **event_args):
         """This method is called when the button is clicked"""
         self.TRc_button_click_count += 1
-        #media_obj1 = anvil.server.call('make_plot1')
-        #media_obj2 = anvil.server.call('make_plot2')
-        #media_obj3 = anvil.server.call('make_plot3')
-        
-        #self.image_2.source = media_obj1
-        #self.image_3.source = media_obj2
-        #self.image_4.source = media_obj3
+    
         if self.selected_button is not None:
           testrun= list(range(1, self.TRc_button_click_count + 1))
           self.costpt()

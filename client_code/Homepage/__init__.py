@@ -16,12 +16,8 @@ class Homepage(HomepageTemplate):
 
   def ATR_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    newtestrun= {}
-    ATR_clicked= alert(content= Test_Run(item=newtestrun), 
-                       title="Add Test Run",
-                       large=True
-                      )
-    
+    new_test_run = Test_Run()
+    ATR_clicked = alert(content=new_test_run, title="Add Test Run", large=True)
     
    
 
