@@ -7,8 +7,6 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil.tables import app_tables
 
-
-
 class Test_Run(Test_RunTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -19,6 +17,7 @@ class Test_Run(Test_RunTemplate):
         self.TRc_button_click_count=0
         self.runcost= []
         #secondary element data
+        #searches for button: https://chat.openai.com/c/9eac150b-167f-4c29-99e2-6b7c9de6b753
         self.TI_button.data = {
             'EN_p': 1.54,
             'Nelec_p': 4,
@@ -37,6 +36,205 @@ class Test_Run(Test_RunTemplate):
             'Cost_p': 357,
             'MW_p': 50.9415
         }
+        self.Cr_button.data = {
+            'EN_p': 1.66,
+            'Nelec_p': 6,
+            'Ed_p': -0.3,
+            'Oxo_p': 0.6,
+            'WF_p': 4.60,
+            'Cost_p': 0.094,
+            'MW_p': 51.9961
+        }
+        self.MN_button.data = {
+            'EN_p': 1.55,
+            'Nelec_p': 7,
+            'Ed_p': -0.9,
+            'Oxo_p': 0.4,
+            'WF_p': 3.8,
+            'Cost_p': 0.0182,
+            'MW_p': 54.938044
+        }
+        self.FE_button.data = {
+            'EN_p': 1.83,
+            'Nelec_p': 8,
+            'Ed_p': -0.8,
+            'Oxo_p': 0.4,
+            'WF_p': 4.30,
+            'Cost_p': 0.0000424,
+            'MW_p': 55.845
+        }
+        self.CO_button.data = {
+            'EN_p': 1.88,
+            'Nelec_p': 9,
+            'Ed_p': -1.5,
+            'Oxo_p': 0.4,
+            'WF_p': 4.40,
+            'Cost_p': 0.0328,
+            'MW_p': 58.933195
+        }
+        self.Ni_button.data = {
+            'EN_p': 1.91,
+            'Nelec_p': 10,
+            'Ed_p': -1.6,
+            'Oxo_p': 0.2,
+            'WF_p': 4.50,
+            'Cost_p': 0.0139,
+            'MW_p': 58.6934
+        }
+        self.CU_button.data = {
+            'EN_p': 1.90,
+            'Nelec_p': 11,
+            'Ed_p': -2.5,
+            'Oxo_p': 0.2,
+            'WF_p': 4.40,
+            'Cost_p': 0.006,
+            'MW_p': 63.546
+        }
+        self.ZR_button.data = {
+            'EN_p': 1.33,
+            'Nelec_p': 4,
+            'Ed_p': 0.7,
+            'Oxo_p': 0.8,
+            'WF_p': 3.90,
+            'Cost_p': 0.0357,
+            'MW_p': 91.224
+        }
+        self.NB_button.data = {
+            'EN_p' : 1.60,
+			      'Nelec_p' : 5,
+      			'Ed_p' : 0.1,
+      			'Oxo_p' : 0.8,
+      			'WF_p' : 4.00,
+      			'Cost_p' : 0.0614,
+      			'MW_p' : 92.90638,
+        }
+        self.MO_button.data = {
+            "EN_p" : 2.16,
+      			"Nelec_p" : 6,
+      			"Ed_p" : -0.9,
+      			"Oxo_p" : 0.6,
+      			"WF_p" : 4.30,
+      			"Cost_p" : 0.0401,
+      			"MW_p" : 95.94,
+        }
+        self.Tc_button.data = {
+            "EN_p" : 1.90,
+      			"Nelec_p" : 7,
+      			"Ed_p" : -1.6,
+      			"Oxo_p" : 0.5,
+      			"WF_p" : 4.4,
+      			"Cost_p" : 100,
+      			"MW_p" : 98
+        }
+        self.RU_button.data = {
+            "EN_p" : 2.20,
+      			"Nelec_p" : 8,
+      			"Ed_p" : -1.9,
+      			"Oxo_p" : 0.4,
+      			"WF_p" : 4.60,
+      			"Cost_p" : 10.40,
+      			"MW_p" : 101.07
+        }
+        self.RH_button.data = {
+            "EN_p" : 2.28,
+      			"Nelec_p" : 9,
+      			"Ed_p" : -2.1,
+      			"Oxo_p" : 0.3,
+      			"WF_p" : 4.75,
+      			"Cost_p" : 147,
+      			"MW_p" : 102.9055
+        }
+        self.PD_button.data = {
+            "EN_p" : 2.20,
+      			"Nelec_p" : 10,
+      			"Ed_p" : -1.8,
+      			"Oxo_p" : 0.0,
+      			"WF_p" : 4.80,
+      			"Cost_p" : 49.5,
+      			"MW_p" : 106.42
+        }
+        self.AG_button.data = {
+            "EN_p" : 1.93,
+      			"Nelec_p" : 11,
+      			"Ed_p" : -4.0,
+      			"Oxo_p" : 0.2,
+      			"WF_p" : 4.30,
+      			"Cost_p" : 0.521,
+      			"MW_p" : 107.8682
+        }
+        self.HF_button.data = {
+            "EN_p": 1.30,
+      			"Nelec_p" : 4,
+      			"Ed_p" : 0.7,
+      			"Oxo_p" : 1.0,
+      			"WF_p" : 3.50,
+      			"Cost_p" : 0.9,
+      			"MW_p" : 178.49
+        }
+        self.TA_button.data = {
+            "EN_p" : 1.50,
+      			"Nelec_p" : 5,
+      			"Ed_p" : 0.3,
+      			"Oxo_p" : 0.8,
+      			"WF_p" : 4.10,
+      			"Cost_p" : 0.298,
+      			"MW_p" : 171.9449
+        }
+        self.W_button.data = {
+            "EN_p" : 2.36,
+      			"Nelec_p" : 6,
+      			"Ed_p" : -0.8,
+      			"Oxo_p" : 0.8,
+      			"WF_p" : 4.50,
+      			"Cost_p" : 0.0353,
+      			"MW_p" : 183.84
+        }
+        self.RE_button.data = {
+            "EN_p" : 1.90,
+      			"Nelec_p" : 7,
+      			"Ed_p" : -1.6,
+      			"Oxo_p" : 0.5,
+      			"WF_p" : 5.00,
+      			"Cost_p" : 3.010,
+      			"MW_p" : 186.207
+        }
+        self.OS_button.data = {
+            "EN_p" : 2.20,
+      			'Nelec_p' : 8,
+      			'Ed_p' : -2.2,
+      			'Oxo_p' : 0.4,
+      			'WF_p' : 4.70,
+      			'Cost_p' : 12,
+      			'MW_p' : 190.2
+        }
+        self.IR_button.data = {
+            'EN_p' : 2.20,
+      			'Nelec_p' : 9,
+      			'Ed_p' : -2.9,
+      			'Oxo_p' : 0.4,
+      			'WF_p' : 5.30,
+      			'Cost_p' : 55.5,
+      			'MW_p' : 192.22
+        }
+        self.PT_button.data = {
+            'EN_p' : 2.28,
+      			'Nelec_p' : 10,
+      			'Ed_p' : -2.4,
+      			'Oxo_p' : 0.1,
+      			'WF_p ': 5.30,
+      			'Cost_p' :27.8,
+      			'MW_p' : 195.084
+        }
+        self.AU_button.data = {
+            "EN_p ": 2.54,
+      			"Nelec_p" : 11,
+      			"Ed_p" : -3.4,
+      			"Oxo_p" : 0.0,
+      			"WF_p" : 4.30,
+      			"Cost_p" : 44.8,
+      			"MW_p" : 196.96657
+        }
+      
         # Initialize button click flags to False
         self.selected_button= None
         self.MW_mpt = 195.084
